@@ -61,11 +61,11 @@
                           <form id="formulario" method="get" action="indexAlumno.html">
                             <h1 id="tituloFormu">Inicio de Sesión</h1>
                             <label for="email" class="etiquetasFormu">Email: </label>
-                            <input type="text" id="email" name="email" class="inputsFormu">
-                            <br><br>
+                            <input type="email" id="email" name="email" class="inputsFormu">
+                            <p id="malEmail" class="etiquetasFormu" style="color: white; font-size: 16px;"></p>
                             <label for="contrasena" class="etiquetasFormu">Contraseña: </label>
-                            <input type="text" id="contrasena" name="contrasena" class="inputsFormu">
-                            <br>
+                            <input type="password" id="contrasena" name="contrasena" class="inputsFormu">  
+                            <p id="malContra" class="etiquetasFormu" style="color: white; font-size: 16px;"></p>
                             <div id="boton">
                                <input type="submit" value="Iniciar Sesión" class="botonFormulario"> 
                             </div>
@@ -141,6 +141,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/validaciones.js"></script>
 
 </body>
 
