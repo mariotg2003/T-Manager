@@ -2726,10 +2726,10 @@ td{
   color: white;
 }
 
-
+  
 #divFormulario{
-  width: 900px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   background-color: #006459;
   border: 3px solid #015047;
   border-radius: 20px; 
