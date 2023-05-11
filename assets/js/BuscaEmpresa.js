@@ -29,11 +29,11 @@ function rellenaTabla(){
         data.forEach(element => {
             let cuadro=document.createElement("tr")
                 cuadro=`<tr>
-                        <td>`+element["name"]+`</td>
-                        <td>`+element["username"]+`</td>
-                        <td><input type="button" value="✏" class="botonTabla" onClick="editarSede()"></td>
-                        <td><input type="button" value="🗑" class="botonTabla"></td>
-                    </tr>`
+                            <td>`+element["name"]+`</td>
+                            <td>`+element["username"]+`</td>
+                            <td><input type="button" value="✏" class="botonTabla" onClick="editarSede()"></td>
+                            <td><input type="button" value="🗑" class="botonTabla"></td>
+                        </tr>`
             
             tabla.innerHTML+=cuadro
         })
