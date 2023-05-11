@@ -14,7 +14,7 @@ function rellenaTabla(){
             let cuadro=document.createElement("div")
             cuadro=`<div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box" style=color:white;>
-                                <div class="icon"><img src="../assets/img/usuario.png" width=50px></div>
+                                <div class="icon"><img src="assets/img/usuario.png" width=50px></div>
                                 <p style="color:black"><span style="color:white;font-size:19px">Nombre:</span> `+element["username"]+`</p>
                                 <p style="color:black"><span style="color:white;font-size:19px">Apellidos:</span> `+element["name"]+`</p>
                                 <p style="color:black"><span style="color:white;font-size:19px">Email:</span> `+element["email"]+`</p>
