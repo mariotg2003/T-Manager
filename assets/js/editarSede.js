@@ -1,11 +1,13 @@
 let nombre=document.getElementById("nombre")
 let direccion=document.getElementById("direccion")
 
-
+//COGER DE LA URL LA ID
+const urlSearchParams = new URLSearchParams(window.location.search);
+const id = urlSearchParams.get("id");
 
 function rellenarDatos(){
 
-    let peticion=fetch("https://rickandmortyapi.com/api/character/2")
+    let peticion=fetch("https://rickandmortyapi.com/api/character/"+id)
 
     peticion.then(Response=>Response.json().then(data=>{
 

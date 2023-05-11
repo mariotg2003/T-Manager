@@ -75,3 +75,13 @@ html{
     border: 2px solid;
     border-radius: 5px;
   }
+
+
+  .etiFormuNuevoUser{
+    font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5%;
+    margin-top: 3%;
+    cursor: pointer;
+  }

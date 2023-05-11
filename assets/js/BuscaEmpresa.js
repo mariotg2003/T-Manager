@@ -31,7 +31,7 @@ function rellenaTabla(){
                 cuadro=`<tr>
                             <td>`+element["name"]+`</td>
                             <td>`+element["username"]+`</td>
-                            <td><input type="button" value="✏" class="botonTabla" onClick="editarSede()"></td>
+                            <td><input type="button" value="✏" class="botonTabla" onClick="editarSede(`+element["id"]+`)"></td>
                             <td><input type="button" value="🗑" class="botonTabla"></td>
                         </tr>`
             
@@ -43,7 +43,7 @@ function rellenaTabla(){
 rellenaTabla()
 rellenarCampos()
 
-function editarSede(){
+function editarSede(id){
     location.replace("EditarSede.html")
 }
 

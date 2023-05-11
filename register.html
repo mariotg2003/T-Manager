@@ -56,32 +56,35 @@
             <div class="container position-relative">
                 <div class="row gy-4 mt-5">
 
-                    <div id="centrado">
-                        <div id="divFormulario" style="width: 70%;">
-                            <form id="formulario" method="get" action="indexProfesor.html">
-                                <h1 id="tituloFormu">Nuevo Usuario</h1>
-                                <label for="nombre" class="etiquetasFormu">Nombre: </label> 
-                                <input type="text" id="nombre" name="nombre" class="inputsFormu">
-                                <label for="apellidos" class="etiquetasFormu">Apellidos: </label>
-                                <input type="text" id="apellidos" name="apellidos" class="inputsFormu">
-                                <br>
-                                <label for="email" class="etiquetasFormu">Email: </label>
-                                <input type="email" id="email" name="email" class="inputsFormu">
-                                <select id="selecto">
-                                    <option value="" class="optione">Sin Rol</option>
-                                    <option value="1" class="optione">Alumno</option>
-                                    <option value="2" class="optione">Profesor</option>
-                                </select>
-                                <br>
-                                <label for="contrasena" class="etiquetasFormu">Contraseña: </label>
-                                <input type="password" id="contrasena" name="contrasena" class="inputsFormu">
-                                
-                                <label for="repetirContra" class="etiquetasFormu">Repite Contraseña: </label>
-                                <input type="password" id="repetirContra" name="repetirContra" class="inputsFormu">
-                                <div id="boton">
-                                   <input type="submit" value="Crear Usuario" class="botonFormulario"> 
-                                </div>
-                            </form>
+                    <div id="centrado"> 
+                        <div id="divFormulario" style="width: 70%;">  
+                          <form id="formularioRegistro" method="get" action="indexProfesor.html">
+                            <h1 id="tituloFormu">Nuevo Usuario</h1> 
+                            <label for="nombre" class="etiFormuNuevoUser" style="display: inline;">Nombre: </label> 
+                            <input type="text" id="nombre" name="nombre" class="inputsFormu">
+
+                            <label for="apellidos" class="etiFormuNuevoUser" style="display: inline;">Apellidos: </label>
+                            <input type="text" id="apellidos" name="apellidos" class="inputsFormu">
+                            <br><br>
+                            <label for="email" class="etiFormuNuevoUser" style="display: inline;">Email: </label>
+                            <input type="email" id="email" name="email" class="inputsFormu">
+                            
+                            <select id="selecto" style="display: inline;">
+                                <option value="" class="optione">Sin Rol</option>
+                                <option value="1" class="optione">Alumno</option> 
+                                <option value="2" class="optione">Profesor</option>
+                            </select>
+                            <br><br>
+                            <label for="contrasena" class="etiFormuNuevoUser" style="display: inline;">Contraseña: </label>
+                            <input type="password" id="contrasena" name="contrasena" class="inputsFormu">
+
+                            <label for="repetirContra" class="etiFormuNuevoUser" style="display: inline;">Repite Contraseña: </label>
+                            <input type="password" id="repetirContra" name="repetirContra" class="inputsFormu">
+
+                            <div id="boton">
+                                <input type="submit" value="Crear Usuario" class="botonFormulario"> 
+                            </div>
+                        </form>
                         </div>
                     </div>
 
@@ -153,7 +156,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/validaciones.js"></script>
+  <script src="assets/js/validacionesRegister.js"></script>
 
 </body>
 

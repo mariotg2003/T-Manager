@@ -2817,13 +2817,53 @@ td{
     cursor: pointer;
 }
 
+
+
+.etiFormuNuevoUser{
+  font-size: 24px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 5%;
+  margin-top: 3%;
+  cursor: pointer;
+  display: inline;
+}
+
+.inputsFormuMal{
+  background-color: #f12f0db6;
+  border-radius: 15px;
+  text-align: center; 
+  border: 3px solid #000;
+  width: 22%;
+  color: white;
+}
+
+
+
+.etiErrorNuevoUser{
+  color: white; 
+  font-size: 16px; 
+  display: inline;
+}
+
 @media (max-width: 600px) { 
+
+
   .inputsFormu{
     background-color: #d1ecdf;
     border-radius: 15px;
     text-align: center; 
     border: 3px solid #000;
     width: 95%;
+  }
+
+  .inputsFormuMal{
+    background-color: #f12f0db6;
+    border-radius: 15px;
+    text-align: center; 
+    border: 3px solid #000;
+    width: 22%;
+    color: white;
   }
 
   .tabla{
@@ -2837,6 +2877,9 @@ td{
     padding-bottom: 10px;
     overflow-x: auto;
   }
+
+
+  
 
 
 
