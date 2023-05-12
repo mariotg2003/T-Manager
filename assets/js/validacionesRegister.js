@@ -14,15 +14,9 @@ formularioRegister.addEventListener("submit",function(evento){
 
     let llave=true
 
-    campoApellidos.value=""
-    campoEmail.value=""
-    campoContra.value=""
-    campoRepe.value=""
-    campoSelect.value=""
 
     if(campoNombre.value==""){
         llave=false
-        console.log("a")
         campoNombre.classList="inputsFormuMal"
         campoNombre.value=""
     }else{
@@ -77,8 +71,11 @@ formularioRegister.addEventListener("submit",function(evento){
 
     if(campoSelect.value==""){
         llave=false
+        campoSelect.style.background="#f12f0db6"
+        campoSelect.value=""
     }else{
         campoSelect.classList="inputsFormu"
+        campoSelect.style.background="#d1ecdf"
     }
 
 

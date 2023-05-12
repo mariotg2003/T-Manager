@@ -1,21 +1,17 @@
-let formularioRegister=document.getElementById("formularioRegistro")
+let formu=document.getElementById("formulario")
 
-formularioRegister.addEventListener("submit",function(evento){
+formu.addEventListener("submit",function(evento){
     evento.preventDefault()
 
-    const contraRegex = /^(?=.*[A-Z])(?=.*\d).{5,9}$/
+    const cifRegex = /^\d{8}[a-zA-Z]$/
 
     let campoNombre=document.getElementById("nombre")
-    let campoCif=document.getElementById("apellidos")
+    let campoCif=document.getElementById("cif")
 
-
+ 
     let llave=true
 
-    campoApellidos.value=""
-    campoEmail.value=""
-    campoContra.value=""
-    campoRepe.value=""
-    campoSelect.value=""
+
 
     if(campoNombre.value==""){
         llave=false
@@ -27,17 +23,21 @@ formularioRegister.addEventListener("submit",function(evento){
     }
 
 
-    if(campoApellidos.value==""){
+    if(campoCif.value==""){
         llave=false
-        campoApellidos.classList="inputsFormuMal"
-        campoApellidos.value=""
+        campoCif.classList="inputsFormuMal"
+        campoCif.value=""
+    }else if(!cifRegex.test(campoCif.value)){
+        llave=false
+        campoCif.classList="inputsFormuMal"
+        campoCif.value=""
     }else{
-        campoApellidos.classList="inputsFormu"
+        campoCif.classList="inputsFormu"
     }
 
 
     if(llave){
-        this.submit()
+        this.submit() 
     }else{
         console.log("Registro fallido")
     }
