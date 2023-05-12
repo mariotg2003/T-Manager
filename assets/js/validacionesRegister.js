@@ -14,9 +14,6 @@ formularioRegister.addEventListener("submit",function(evento){
 
     let llave=true
 
-
-    
-    
     campoApellidos.value=""
     campoEmail.value=""
     campoContra.value=""
@@ -35,8 +32,8 @@ formularioRegister.addEventListener("submit",function(evento){
 
     if(campoApellidos.value==""){
         llave=false
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoApellidos.classList="inputsFormuMal"
+        campoApellidos.value=""
     }else{
         campoApellidos.classList="inputsFormu"
     }
@@ -44,8 +41,8 @@ formularioRegister.addEventListener("submit",function(evento){
 
     if(campoEmail.value==""){
         llave=false
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoEmail.classList="inputsFormuMal"
+        campoEmail.value=""
     }else{
         campoEmail.classList="inputsFormu"
     }
@@ -53,13 +50,13 @@ formularioRegister.addEventListener("submit",function(evento){
 
     if(campoContra.value==""){
         llave=false
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoContra.classList="inputsFormuMal"
+        campoContra.value=""
     }else if(!contraRegex.test(campoContra.value)){
         llave=false
         console.log("La contraseña no cumple los requisitos")
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoContra.classList="inputsFormuMal"
+        campoContra.value=""
     }else{
         campoContra.classList="inputsFormu"
     }
@@ -67,13 +64,13 @@ formularioRegister.addEventListener("submit",function(evento){
 
     if(campoRepe.value==""){
         llave=false
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoRepe.classList="inputsFormuMal"
+        campoRepe.value=""
     }else if(campoRepe.value!=campoContra.value){
         llave=false
         console.log("La contraseña no coincide")
-        campoNombre.classList="inputsFormuMal"
-        campoNombre.value=""
+        campoRepe.classList="inputsFormuMal"
+        campoRepe.value=""
     }else{
         campoRepe.classList="inputsFormu"
     }
