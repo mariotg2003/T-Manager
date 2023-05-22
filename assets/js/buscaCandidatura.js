@@ -6,7 +6,7 @@ function rellenaTabla(){
 
     let personajes=[]
 
-    let peticion=fetch("https://rickandmortyapi.com/api/character")
+    let peticion=fetch("http://127.0.0.1:8000/api/empresas/"+id)
 
     peticion.then(Response=>Response.json()).then(data=>{
         console.log(data)

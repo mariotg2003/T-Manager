@@ -48,7 +48,7 @@ formularioRegister.addEventListener("submit",function(evento){
         campoContra.value=""
     }else if(!contraRegex.test(campoContra.value)){
         llave=false
-        console.log("La contraseña no cumple los requisitos")
+        alert("La contraseña no cumple los requisitos")
         campoContra.classList="inputsFormuMal"
         campoContra.value=""
     }else{
@@ -62,7 +62,7 @@ formularioRegister.addEventListener("submit",function(evento){
         campoRepe.value=""
     }else if(campoRepe.value!=campoContra.value){
         llave=false
-        console.log("La contraseña no coincide")
+        alert("La contraseña no coincide")
         campoRepe.classList="inputsFormuMal"
         campoRepe.value=""
     }else{
@@ -74,16 +74,60 @@ formularioRegister.addEventListener("submit",function(evento){
         campoSelect.style.background="#f12f0db6"
         campoSelect.value=""
     }else{
+        
         campoSelect.classList="inputsFormu"
         campoSelect.style.background="#d1ecdf"
+
     }
 
 
 
     if(llave){
-        this.submit()
-    }else{
-        console.log("Registro fallido")
+
+        // Objeto JSON a enviar
+        const data = {
+            nombre: campoNombre.value,
+            apellidos: campoApellidos.value,
+            idRol:parseInt(campoSelect.value), 
+            email: campoEmail.value,
+            password: campoContra.value
+        };
+        
+        // URL de destino
+        const url = "http://127.0.0.1:8000/api/register";
+        
+        // Configuración de la solicitud
+        const options = {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        };
+        
+        // Enviar la solicitud
+        fetch(url, options)
+            .then(response => {
+                if(response.ok){
+                    window.location.href("indexProfesor.html")
+                }else{
+                    alert("El email ya está registrado")
+                    campoNombre.value=""
+                    campoApellidos.value=""
+                    campoEmail.value=""
+                    campoContra.value=""
+                    campoRepe.value=""
+                }
+            })
+            .then(data => {
+                console.log("Respuesta del servidor:", data);
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+        
+            
+            
     }
 
 

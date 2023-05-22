@@ -11,11 +11,15 @@ console.log(id)
 
 function rellenarDatos(){
 
-    let peticion=fetch("https://jsonplaceholder.typicode.com/users/"+id)
+    let peticion=fetch("http://127.0.0.1:8000/api/empresas/"+id)
 
     peticion.then(Response=>Response.json().then(data=>{
 
         console.log(data)
+
+        if(data["mensaje"]=="Empresa actualizada correctamente"){
+            location.replace("empresa.html")
+        }
 
         nombre.value=data["username"]
         cif.value=data["phone"]

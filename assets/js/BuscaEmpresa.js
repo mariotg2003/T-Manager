@@ -8,11 +8,16 @@ const id = urlSearchParams.get("id");
 
 
 function rellenarCampos(){
-    let peticionDatos=fetch("https://jsonplaceholder.typicode.com/users/"+id)
+    let peticionDatos=fetch("http://127.0.0.1:8000/api/empresas/"+id)
 
     peticionDatos.then(Response=>Response.json()).then(data=>{
-        nombreEmpresa.innerHTML=data["name"]
-        empresaCIF.innerHTML=data["phone"]
+
+        if(data["mensaje"]=="Empresa no encontrada."){
+            location.replace("empresas.html")
+        }
+
+        nombreEmpresa.innerHTML=data["data"]["nombre"]
+        empresaCIF.innerHTML=data["data"]["CIF"]
     }) 
 }
 

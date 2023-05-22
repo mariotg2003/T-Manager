@@ -12,17 +12,22 @@ console.log(id)
 
 function rellenarDatos(){
 
-    let peticion=fetch("https://jsonplaceholder.typicode.com/users/"+id)
+    let peticion=fetch("http://127.0.0.1:8000/api/alumnos/"+id)
 
     peticion.then(Response=>Response.json().then(data=>{
 
+        if(data["mensaje"]=="Alumno no encontrado."){
+            location.replace("alumnos.html")
+        }
+
+
         console.log(data)
 
-        nombre.value=data["username"]
-        apellidos.value=data["name"]
-        email.value=data["email"]
-        contrasena.value=data["id"]
-        repetirContra.value=data["id"]
+        nombre.value=data["data"]["nombre"]
+        apellidos.value=data["data"]["apellidos"]
+        email.value=data["data"]["email"]
+        contrasena.value=""
+        repetirContra.value=""
 
     }))
 
@@ -102,7 +107,48 @@ formu.addEventListener("submit", function(evento){
 
 
     if(llave){
-        this.submit()
+
+        // Objeto JSON a enviar
+        const data = {
+            nombre: campoNombre.value,
+            apellidos: campoApellidos.value,
+            email: campoEmail.value,
+            password: campoContra.value
+        };
+        
+        // URL de destino
+        const url = "http://127.0.0.1:8000/api/EditarAlumno/"+id;
+        
+        // Configuración de la solicitud
+        const options = {
+            method: "PUT",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        };
+        
+        // Enviar la solicitud
+        fetch(url, options)
+            .then(response => {
+                if(response.ok){
+                    window.location.href="indexProfesor.html"
+                }else{
+                    alert("El email ya está registrado")
+                    campoNombre.value=""
+                    campoApellidos.value=""
+                    campoEmail.value=""
+                    campoContra.value=""
+                    campoRepe.value=""
+                }
+            })
+            .then(data => {
+                console.log("Respuesta del servidor:", data);
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+
     }else{
         console.log("Registro fallido")
     }
