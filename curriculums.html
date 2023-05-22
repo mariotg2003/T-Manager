@@ -47,7 +47,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="indexAlumno.html">Menú</a></li>
-          <li><a href="#about">Subir Curriculum</a></li>
+          <li id="cerrarSesion" style="color:white; cursor: pointer;">
+            <span id="cerrarSesionBoton">Subir Currículum
+              <input type="file" id="fileInput" accept=".pdf" onchange="uploadPDFFile(this)" style="display:none;">
+            </span>
+          </li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -138,7 +142,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/logicaPdf.js"></script>
 </body>
 
 </html>
