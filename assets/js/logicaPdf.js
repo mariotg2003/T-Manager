@@ -11,7 +11,6 @@ function uploadPDFFile(fileInput) {
   
     // Aquí puedes realizar la lógica adicional para procesar o mostrar el archivo PDF
     console.log('Archivo PDF seleccionado:', file.name);
-    console.log('Rute del archivo:', file.value)
   }
 
 
