@@ -17,6 +17,7 @@ function rellenarDatos(){
     peticion.then(Response=>Response.json().then(data=>{
 
         if(data["mensaje"]=="Alumno no encontrado."){
+            alert("Alumno no encontrado")
             location.replace("alumnos.html")
         }
 

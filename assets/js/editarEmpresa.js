@@ -18,6 +18,7 @@ function rellenarDatos(){
         console.log(data)
 
         if(data["mensaje"]=="Empresa actualizada correctamente"){
+            alert("Empresa no encontrada")
             location.replace("empresa.html")
         }
 

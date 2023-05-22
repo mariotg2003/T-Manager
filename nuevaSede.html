@@ -76,10 +76,10 @@
                             <form id="formulario" action="BuscaEmpresa.html" method="get">
                                 <h1 id="tituloFormu">Nueva Sede</h1>
                                 <label for="nombre" class="etiquetasFormu">Nombre: </label>
-                                <input type="text" id="nombre" name="nombre" class="inputsFormu">
+                                <input type="text" id="nombre" name="nombre" class="inputsFormu" onkeyup="resizeInput('nombre')">
                                 <br><br>
                                 <label for="direccion" class="etiquetasFormu">Direccion: </label>
-                                <input type="text" id="direccion" name="direccion" class="inputsFormu">
+                                <input type="text" id="direccion" name="direccion" class="inputsFormu" onkeyup="resizeInput('direccion')">
                                 <br>
                                 <div id="boton">
                                    <input type="submit" value="Crear Sede" class="botonFormulario"> 

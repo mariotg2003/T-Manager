@@ -44,3 +44,14 @@ formu.addEventListener("submit",function(evento){
 
 
 })
+
+
+function resizeInput(campo) {
+    let input = document.getElementById(campo);
+    console.log(input.value.length)
+    if(input.value.length>19){
+        input.size = input.value.length;
+    }else if(input.value.length<19){
+        input.size=20
+    }
+  }

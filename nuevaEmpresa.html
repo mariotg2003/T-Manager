@@ -76,10 +76,10 @@
                             <form id="formulario" action="empresas.html" method="get">
                                 <h1 id="tituloFormu">Nueva Empresa</h1>
                                 <label for="nombre" class="etiquetasFormu">Nombre: </label>
-                                <input type="text" id="nombre" name="nombre" class="inputsFormu">
+                                <input type="text" id="nombre" name="nombre" class="inputsFormu" onkeyup="resizeInput('nombre')">
                                 <br><br>
                                 <label for="cif" class="etiquetasFormu">CIF: </label>
-                                <input type="text" id="cif" name="cif" class="inputsFormu">
+                                <input type="text" id="cif" name="cif" class="inputsFormu" onkeyup="resizeInput('cif')">
                                 <br>
                                 <div id="boton">
                                    <input type="submit" value="Crear Empresa" class="botonFormulario"> 

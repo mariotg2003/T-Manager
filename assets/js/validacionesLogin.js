@@ -41,10 +41,21 @@ formulario.addEventListener("submit",function(evento){
         malContra.innerHTML="La contraseña no cumple las condiciones"
     }
     if(llave){
+        localStorage.setItem("token","a")
         this.submit()
     }else{
-        console.log("Logueo Fallido")
+        console.log("Logueo Fallido") 
     }
 
 
 })
+
+function resizeInput(campo) {
+    let input = document.getElementById(campo);
+    console.log(input.value.length)
+    if(input.value.length>19){
+        input.size = input.value.length;
+    }else if(input.value.length<19){
+        input.size=20
+    }
+  }

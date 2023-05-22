@@ -52,7 +52,9 @@ function rellenaTabla(){
                         
         })
         
-    })
+    }).catch(error => {
+        console.log("Error:", error);
+    });
 }
 
 
