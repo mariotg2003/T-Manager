@@ -56,6 +56,7 @@ formu.addEventListener("submit", function(evento){
         llave=false
         campoNombre.classList="inputsFormuMal"
         campoNombre.value=""
+        alert("El campo del nombre debe estar completo")
     }else{
         campoNombre.classList="inputsFormu"
     }
@@ -65,6 +66,7 @@ formu.addEventListener("submit", function(evento){
         llave=false
         campoApellidos.classList="inputsFormuMal"
         campoApellidos.value=""
+        alert("El campo de los apellidos debe estar completo")
     }else{
         campoApellidos.classList="inputsFormu"
     }
@@ -74,6 +76,7 @@ formu.addEventListener("submit", function(evento){
         llave=false
         campoEmail.classList="inputsFormuMal"
         campoEmail.value=""
+        alert("El campo del email debe estar completo")
     }else{
         campoEmail.classList="inputsFormu"
     }
@@ -83,9 +86,10 @@ formu.addEventListener("submit", function(evento){
         llave=false
         campoContra.classList="inputsFormuMal"
         campoContra.value=""
+        alert("El campo de la contraseña debe estar completo")
     }else if(!contraRegex.test(campoContra.value)){
         llave=false
-        console.log("La contraseña no cumple los requisitos")
+        alert("La contraseña no cumple los requisitos")
         campoContra.classList="inputsFormuMal"
         campoContra.value=""
     }else{
@@ -97,9 +101,10 @@ formu.addEventListener("submit", function(evento){
         llave=false
         campoRepe.classList="inputsFormuMal"
         campoRepe.value=""
+        alert("El campo de confirmación de la contraseña debe estar completo")
     }else if(campoRepe.value!=campoContra.value){
         llave=false
-        console.log("La contraseña no coincide")
+        alert("La contraseña no coincide")
         campoRepe.classList="inputsFormuMal"
         campoRepe.value=""
     }else{

@@ -52,6 +52,7 @@ formu.addEventListener("submit",function(evento){
         console.log("a")
         campoNombre.classList="inputsFormuMal"
         campoNombre.value="" 
+        alert("El campo del nombre debe estar completo")
     }else{
         campoNombre.classList="inputsFormu"
     }
@@ -61,10 +62,12 @@ formu.addEventListener("submit",function(evento){
         llave=false
         campoCif.classList="inputsFormuMal"
         campoCif.value=""
+        alert("El campo del cif debe estar completo")
     }else if(!cifRegex.test(campoCif.value)){
         llave=false
         campoCif.classList="inputsFormuMal"
         campoCif.value=""
+        alert("El cif no cumple las características")
     }else{
         campoCif.classList="inputsFormu"
     }

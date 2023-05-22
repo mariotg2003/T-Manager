@@ -55,6 +55,7 @@ formu.addEventListener("submit",function(evento){
         campoAlumno.style.background="#f12f0db6"
         campoAlumno.style.border="2px solid black"
         campoAlumno.value=""
+        alert("El campo del alumno debe estar completo")
     }else{
         campoAlumno.style.background="#d1ecdf"
         campoAlumno.style.color="black"
@@ -65,6 +66,7 @@ formu.addEventListener("submit",function(evento){
         campoDireccion.style.background="#f12f0db6"
         campoDireccion.style.border="2px solid black"
         campoDireccion.value=""
+        alert("El campo de la empresa debe estar completo")
     }else{
         campoDireccion.style.background="#d1ecdf"
         campoDireccion.style.color="black"

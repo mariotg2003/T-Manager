@@ -13,12 +13,14 @@ formu.addEventListener("submit",function(evento){
         llave=false
         campoNombre.classList="inputsFormuMal"
         campoNombre.value=""
+        alert("El campo del nombre debe estar completo")
     }
 
     if(campoDireccion.value==""){
         llave=false
         campoDireccion.classList="inputsFormuMal"
         campoDireccion.value=""
+        alert("El campo de la dirección debe estar completo")
     }
 
 
