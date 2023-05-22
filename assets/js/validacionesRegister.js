@@ -19,6 +19,7 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoNombre.classList="inputsFormuMal"
         campoNombre.value=""
+        alert("El campo del nombre debe estar completo")
     }else{
         campoNombre.classList="inputsFormu"
     }
@@ -28,6 +29,7 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoApellidos.classList="inputsFormuMal"
         campoApellidos.value=""
+        alert("El campo de los apellidos debe estar completo")
     }else{
         campoApellidos.classList="inputsFormu"
     }
@@ -37,6 +39,7 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoEmail.classList="inputsFormuMal"
         campoEmail.value=""
+        alert("El campo del email debe estar completo")
     }else{
         campoEmail.classList="inputsFormu"
     }
@@ -46,6 +49,7 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoContra.classList="inputsFormuMal"
         campoContra.value=""
+        alert("El campo de la contraseña debe estar completo")
     }else if(!contraRegex.test(campoContra.value)){
         llave=false
         alert("La contraseña no cumple los requisitos")
@@ -60,6 +64,7 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoRepe.classList="inputsFormuMal"
         campoRepe.value=""
+        alert("El campo de repetir contraseña debe estar completo")
     }else if(campoRepe.value!=campoContra.value){
         llave=false
         alert("La contraseña no coincide")
@@ -73,8 +78,8 @@ formularioRegister.addEventListener("submit",function(evento){
         llave=false
         campoSelect.style.background="#f12f0db6"
         campoSelect.value=""
+        alert("Se debe seleccionar un rol")
     }else{
-        
         campoSelect.classList="inputsFormu"
         campoSelect.style.background="#d1ecdf"
 
