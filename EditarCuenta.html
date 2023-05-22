@@ -74,18 +74,18 @@
                             <form id="formulario" method="get" action="EditarCuenta.html"> 
                                 <h1 id="tituloFormu">Editar Cuenta</h1>
                                 <label for="nombre" class="etiquetasFormu">Nombre: </label>
-                                <input type="text" id="nombre" name="nombre" class="inputsFormu"> 
+                                <input type="text" id="nombre" name="nombre" class="inputsFormu" onkeyup="resizeInput('nombre')"> 
                                 <label for="apellidos" class="etiquetasFormu">Apellidos: </label>
-                                <input type="text" id="apellidos" name="apellidos" class="inputsFormu"> 
+                                <input type="text" id="apellidos" name="apellidos" class="inputsFormu" onkeyup="resizeInput('apellidos')"> 
                                 <br>
                                 <label for="email" class="etiquetasFormu">Email: </label>
-                                <input type="email" id="email" name="email" class="inputsFormu">
+                                <input type="email" id="email" name="email" class="inputsFormu" onkeyup="resizeInput('email')">
                                 <br>
                                 <label for="contrasena" class="etiquetasFormu">Contraseña: </label>
-                                <input type="password" id="contrasena" name="contrasena" class="inputsFormu">
+                                <input type="password" id="contrasena" name="contrasena" class="inputsFormu" onkeyup="resizeInput('contrasena')">
                                 
                                 <label for="repetirContra" class="etiquetasFormu">Repite Contraseña: </label>
-                                <input type="password" id="repetirContra" name="repetirContra" class="inputsFormu">
+                                <input type="password" id="repetirContra" name="repetirContra" class="inputsFormu" onkeyup="resizeInput('repetirContra')">
                                 <div id="boton">
                                    <input type="submit" value="Actualizar" class="botonFormulario"> 
                                 </div>
